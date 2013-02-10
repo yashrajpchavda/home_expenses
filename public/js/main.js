@@ -33,7 +33,8 @@ require.config({
 		Underscore : "lib/underscore",
 		AllExpenses : "app/views/all_expenses",
 		UserModel : "app/models/user"
-	}
+	},
+	waitSeconds: 30
 });
 
 /*
