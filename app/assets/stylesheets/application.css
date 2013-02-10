@@ -13,10 +13,3 @@
  * = require 'jquery-ui-1.9.2.custom'
  * = require 'user-defined'
  */
-
-
-@import "bootstrap.css";
-@import "body-reset.css";
-@import "bootstrap-responsive.css";
-@import "jquery-ui-1.9.2.custom";
-@import "user-defined.css";
