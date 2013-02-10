@@ -1,0 +1,92 @@
+<div id="new_expense" class="container">
+	<div class="row">
+		<div class="span2">
+			<p class="lead">
+				New Expense
+			</p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="offset1 span6">
+			<form class="form-horizontal">
+				<div id="new_expense_container">
+					<div class="page-header">
+						<h1>Spent somethin, eh ? <small> Add it here !! </small></h1>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="expense_type">Expense Type</label>
+						<div class="controls">
+							<select id="expense_type" name="expense_type">
+								<option>Expense Type</option>
+								<option>Grocery</option>
+								<option>Vegetables</option>
+								<option>Water Can</option>
+								<option>Water Bill</option>
+								<option>Electricity Bill</option>
+								<option>Internet Bill</option>
+								<option>House Rent</option>
+								<option>DTH</option>
+								<option>Maid</option>
+								<option>Cook</option>
+								<option>Extra Expense</option>
+							</select>
+							<span class="help-inline"></span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="description">Description</label>
+						<div class="controls">
+							<input type="text" id="description" placeholder="Description" name="description">
+							<span class="help-inline"></span>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="payment_type">Payment Type</label>
+						<div class="controls">
+							<select id="payment_type" name="payment_type">
+								<option>Payment Type</option>
+								<option>Cash</option>
+								<option>Sodexo</option>
+							</select>
+							<span class="help-inline"></span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="amount">Amount</label>
+						<div class="controls">
+							<!-- <input type="password" id="inputAmount" class="input-mini" placeholder="Amount"> -->
+							<div class="input-append">
+								<input class="span2" id="amount" type="text" placeholder="Amount" name="amount">
+								<span class="add-on">.00</span>
+							</div>
+							<span class="help-inline"></span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="paid_by">Paid By</label>
+						<div class="controls">
+							<input type="text" id="paid_by" disabled placeholder="{{options.user}}" name="paid_by">
+							<span class="help-inline"></span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="paid_date">Paid Date</label>
+						<div class="controls">
+							<input type="text" id="paid_date" placeholder="Select Paid Date" name="paid_date" class="clickable" readonly="true">
+							<span class="help-inline"></span>
+						</div>
+					</div>
+
+					<div class="form-actions">
+						<button id="btn_save" type="submit" class="btn btn-primary">
+							Save
+						</button>
+						<button id="btn_clear" type="button" class="btn">
+							Clear
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

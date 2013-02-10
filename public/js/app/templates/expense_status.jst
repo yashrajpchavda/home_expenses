@@ -1,0 +1,137 @@
+<div id="expense_status" class="container">
+	<div class="row">
+		<div class="span2">
+			<p class="lead">
+				Expense Status
+			</p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="offset1 span8">
+			<div class="page-header">
+				<h1>Current Month Status </h1>
+			</div>
+			<h4>Budget Details</h4>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Cash</th>
+						<th>Sodexo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+						<p class="text-info">
+							<strong>Budget</strong>
+						</p></td>
+						<td>{{budget_cash}}</td>
+						<td>{{budget_sodexo}}</td>
+					</tr>
+					<tr>
+						<td>
+						<p class="text-info">
+							<strong>Remaining</strong>
+						</p></td>
+						<td>{{remaining_cash}}</td>
+						<td>{{remaining_sodexo}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>Extra Expense Details</h4>
+
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Cash</th>
+						<th>Sodexo</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each extra_expenses}}
+					<tr>
+						<td>
+						<p class="text-info">
+							<strong>{{username}}</strong>
+						</p></td>
+						<td>{{cash}}</td>
+						<td>{{sodexo}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+
+<!--
+			<h4>Handover</h4>
+			<div class="well">
+				<div class="btn-group keep-center">
+					<button class="btn btn-large btn-primary" id="initiate_handover_process" data-toggle="modal" data-target="#handover_modal" type="button">
+						Initiate Handover Process
+					</button>
+				</div>
+			</div>
+			<div id="handover_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						×
+					</button>
+					<h3 id="myModalLabel">Handover</h3>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="remaining_cash">Remaining Cash</label>
+							<div class="controls">
+								<input type="text" id="remaining_cash" value="{{remaining_cash}}" disabled>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="remaining_sodexo">Remaining Sodexo</label>
+							<div class="controls">
+								<input type="text" id="remaining_sodexo" value="{{remaining_sodexo}}" disabled>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="next_month_cash">Next Month Cash</label>
+							<div class="controls">
+								<input type="text" id="next_month_cash" placeholder="Next month's cash budget">
+								<span class="help-inline"></span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="next_month_sodexo">Next Month Sodexo</label>
+							<div class="controls">
+								<input type="text" id="next_month_sodexo" placeholder="Next month's sodexo budget">
+								<span class="help-inline"></span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="next_month_sodexo">Next Month Owner</label>
+							<div class="controls">
+								<select id="next_month_owner" name="next_month_owner">
+									<option>Next Month Owner</option>
+									<option>yashraj</option>
+									<option>jayesh</option>
+									<option>harsh</option>
+									<option>dhiren</option>
+									<option>kaushik</option>
+								</select>
+								<span class="help-inline"></span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">
+						Close
+					</button>
+					<button class="btn btn-primary" id="handover_save">
+						Save changes
+					</button>
+				</div>
+			</div>
+-->
+		</div>
+	</div>
+</div>

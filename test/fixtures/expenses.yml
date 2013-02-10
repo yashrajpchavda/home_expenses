@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: expenses
+#
+#  id           :integer          not null, primary key
+#  expense_type :string(255)
+#  description  :text
+#  payment_type :string(255)
+#  amount       :float
+#  paid_date    :datetime
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  user_id      :integer
+#  budget_id    :integer
+#  is_extra     :boolean
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  expense_type: MyString
+  description: MyText
+  payment_type: MyString
+  amount: 1.5
+  paid_date: 2012-11-03 15:54:42
+
+two:
+  expense_type: MyString
+  description: MyText
+  payment_type: MyString
+  amount: 1.5
+  paid_date: 2012-11-03 15:54:42

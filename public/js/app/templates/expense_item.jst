@@ -1,0 +1,23 @@
+<td>{{id}}</td>
+<td>{{description}}</td>
+<td>{{expense_type}}</td>
+<td>{{payment_type}}</td>
+<td>{{amount}}</td>
+<td>{{paid_date}}</td>
+<td>{{username}}</td>
+
+<td>
+	{{#if is_editable}}
+<button type="button" data-toggle="modal" title="Wanna modify it ? Click me !" data-target="#modal_{{id}}" data-keyboard="false" class="btn btn-small btn-primary edit-button">
+	Edit
+</button>
+{{/if}}
+</td>
+<td>
+	{{#if is_editable}}
+	<div id="modal_{{id}}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modal_{{id}}" aria-hidden="true">
+
+</div>
+
+{{/if}}
+</td>

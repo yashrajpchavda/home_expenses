@@ -1,0 +1,6 @@
+jquery - done
+backbone - done 
+require - done
+underscore - done
+text - done
+order - not required

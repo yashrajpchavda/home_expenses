@@ -1,0 +1,53 @@
+.break {
+	display: block;
+	clear: both;
+}
+
+#new_expense_container {
+	margin-top: 20px;
+}
+
+#new_expense_container .form-actions {
+	
+}
+
+.keep-center {
+	text-align: center;
+}
+
+/* 
+ * clickable class: to have pointer cursor
+ */
+
+.clickable {
+	cursor: pointer !important;
+}
+
+/*
+ * CSS for ajax loader image
+ */
+
+#ajax_loader {
+	background-image: url("images/ajax-loader.gif");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 31px; /*image width */
+  height: 31px; /*image height */
+  left: 50%; 
+  top: 50%;
+  margin-left: -15px; /*image width/2 */
+  margin-top: -15px; /*image height/2 */
+}
+
+/*
+ * overriding modal-header css
+ */
+
+.modal-header {
+	background-color: #3898FF;
+	color: #FFFFFF !important;
+}
+
+.modal-header button.close {
+	color: #FFFFFF !important;
+}

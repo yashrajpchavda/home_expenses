@@ -1,0 +1,86 @@
+procedure for adding extra expense
+
+- while adding new expense, if its not added by the month owner mark it extra.
+- check has to be done on server side, client need not to be aware of it.
+- add a bit field in the expense model.
+- modify save code for the model to take care of updating that bit.
+- a check to be made is, if session_user_id is not same as budget.month_owner then add it as extra.
+- while adding an extra expense budget table should not be updated
+- in model add a method for checking whether its an extra expense or not.
+
+Display all extra expenses:
+- find all the extra expenses store them in a collection
+- create a hash for all the users - key should be user id, set the initial value for them as 0
+- example hash: user_id => { :cash => 1500, :sodexo => 200 }
+- iterate through extra expenses, based on user_id update the total of expense done by users, maintain the grand total also
+- wrap each user json in an object and send it to the client - update user ids with user names.
+- send it to the budget model as extra_expenses attribute
+- on the client side, iterate through respone received, generate template
+
+done -- To prevent edits for the expenses done by other users:
+- edit button should only come if the expense is added by the current user
+- while returning the expenses return is_editable as true for all the expenses which are added by the logged in user.
+- based on that attribute render edit button on client side
+- on server side make a check while updating the expense that expense.user_id should be same as logged in user's id. if they're not same return abusive message.
+
+
+####### Find a solution for multiple model update in one call
+
+********** THINGS TO BE DONE BEFORE HANDOVER PROCEDURE *********************
+- Based on extra expenses, expense models should be created with the proper field values.
+- Create a collection to store them all. Create a separate collection.
+- Define a method called save in the collection which iterates through the models inside and saves them one by one.
+- 
+
+
+Handover procedure:
+- screen should contain a textbox to take the initial amount for the bugdet for that month
+- it should contain a dropdown to select the month owner for the next upcoming month
+- find a way to store multiple models ************************ create multiple models for the extra expenses
+- create an entry in the budget table for the next month budget
+- save extra expenses as the normal expenses, paid_by as next_month_owner, description as paid_to_user_as_last_month_extra_expense, date should be the first date of respective month, update the budget table accordingly
+
+
+********************************** Scenario ## How data should be sent back on handover save ?? :-(
+- Handover process should be executed manually, after adding all the expenses for the current month
+- User clicks on Status tab and sees all extra expenses
+- User decides to do handover.
+- User clicks on handover button
+- User should be prompted with 
+ -- a form where he sees disabled previous month's remaining cash and sodexo
+ -- he can enter initial amount for that month, cash and sodexos
+ -- can select the month owner for the next month
+ -- a save and a cancel button
+- User clicks on Save
+- Make an Ajax call and post to some url - try posting with collection.toJSON and see if we can interpret the json on server, might save so many ajax calls
+- On the server side put everything in transaction
+ -- create an entry in the budget table for the next month with the values provided
+ -- save extra expenses as the normal expenses, paid_by as next_month_owner, description as paid_to_user_as_last_month_extra_expense, date should be the first date of respective month, update the budget table accordingly
+
+
+----------------------------- IMMEDIATE REQUIREMENTS ----------------------------
+1) Integrate Date Picker
+2) Add a filter for expenses
+3) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
