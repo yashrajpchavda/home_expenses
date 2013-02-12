@@ -84,7 +84,7 @@ class ExpensesController < ApplicationController
           expense_saved = expense.save_it(params["expense"])
           
           # udpate budget only if expense is extra  
-          if expense.is_extra
+          if !expense.is_extra
             #code to update budget -------------------------
             #budget = Budget.current_month_budget
             
